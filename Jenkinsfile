@@ -4,20 +4,14 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'python3 --version'
-                // Add steps to install dependencies, e.g., sh 'pip install -r requirements.txt'
             }
         }
         stage('Test') {
             steps {
-                sh 'echo "Running tests..." '
-                // Run your tests, e.g., sh 'pytest'
+                echo 'Running tests...'
+                // This is where you run your file
+                sh 'python3 p1.py'
             }
         }
-    }
-}
-
-stage('Test') {
-    steps {
-        sh 'python3 p1.py' 
     }
 }
