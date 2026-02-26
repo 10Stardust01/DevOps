@@ -15,3 +15,9 @@ pipeline {
         }
     }
 }
+
+stage('Test') {
+    steps {
+        sh 'python3 p1.py' 
+    }
+}
